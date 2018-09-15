@@ -5,6 +5,7 @@ services:
     ports:
       - "8080:8080"
       - "5000:5000"
+      - "50000:50000"
     volumes:
       - ./jenkins:/var/jenkins_home
   jenkins_slave:
@@ -13,4 +14,3 @@ services:
         - url http://10.28.110.110:8080/computer/yo/slave-agent.jnlp
         - workDir workDir "/var/jenkins_home"
         - d98780a529bc3939a136528f78b5ae3bd79bde3bff9c7d3157da1f7e9bf8884f
-        - slave1
